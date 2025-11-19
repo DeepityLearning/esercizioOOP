@@ -24,3 +24,16 @@ const barolo = new PremiumWine('brunate barolo', 'Francesco Borgogno', 2021, 75,
 console.log(moretti.toString());
 console.log(dolcetto.toString());
 console.log(barolo.toString());
+
+
+//aggiungere una proprietà chiamata bottleNumber a beverage e un metodo
+//chiamato sellBottles che prende come input le bottiglie da vendere e,
+//se ci sono abbastaza bottiglie le rimuove dal numero totale, altrimenti
+//non fa nulla e logga l'errore
+
+//aggingere una proprietà non esposta (protetta) a beverage chiamata _price
+//_price è esposta in lettura tramite getter
+//_price è esposta in scrittura tramite setter che controlla che il nuovo prezzo 
+//non sia negativo
+//l'unica differenza sta nel premiumWine che nel getter moltiplica il prezzo usando
+//questa formula prezzoReale = prezzo + (prezzo / 10 * anniDiInvecchiamento);
