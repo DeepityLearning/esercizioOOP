@@ -59,3 +59,75 @@ const h1Title = document.getElementById('main-title');
 console.log(h1Title);
 
 h1Title.innerText = "Enoteca Bartoletti S.P.A."
+
+
+const barbera = new PremiumWine("Barbera d'Asti", "Consorzio Barbera", 2020, 75, 12.5, "Barbera", "Piemonte", "D.O.C.", 18);
+
+
+const nameSpan = document.getElementById('card-name');
+nameSpan.innerText = barbera.name;
+
+const producerSpan = document.getElementById('card-producer');
+producerSpan.innerText = barbera.producer;
+
+document.getElementById('card-yob').innerText = barbera.yob;
+document.getElementById('card-quantity').innerText = barbera.quantity;
+document.getElementById('card-alchool').innerText = barbera.alcohol;
+document.getElementById('card-bottleNumber').innerText = barbera.bottleNumber;
+document.getElementById('card-price').innerText = barbera.price;
+document.getElementById('card-vite').innerText = barbera.vite;
+document.getElementById('card-location').innerText = barbera.location;
+document.getElementById('card-certification').innerText = barbera.certification;
+
+
+const champagne = new PremiumWine("Champagne Brut", "Charles Vercy", 2020, 75, 12, "chardonnay", "francia", "D.O.C.", 19.20);
+
+const newCard = document.createElement('div');
+newCard.className = 'card';
+
+const main = document.getElementById('main-content');
+main.appendChild(newCard);
+
+const cardImage = document.createElement('img');
+cardImage.src = './assets/wine-glass.svg';
+cardImage.width = '100';
+newCard.appendChild(cardImage);
+
+
+const nameContainer = document.createElement('div');
+newCard.appendChild(nameContainer);
+
+const nameKey = document.createElement('strong');
+nameKey.innerText = 'nome: ';
+nameContainer.appendChild(nameKey);
+
+const nameValue = document.createElement('span');
+nameValue.innerText = champagne.name;
+nameContainer.appendChild(nameValue);
+
+///////////////////////////////////////////
+
+const producerContainer = document.createElement('div');
+newCard.appendChild(producerContainer);
+
+const producerKey = document.createElement('strong');
+producerKey.innerText = 'produttore: ';
+producerContainer.appendChild(producerKey);
+
+const producerValue = document.createElement('span');
+producerValue.innerText = champagne.producer;
+producerContainer.appendChild(producerValue);
+
+//////////////////////////////////////////////////////
+
+const yobContainer = document.createElement('div');
+newCard.appendChild(yobContainer);
+
+const yobKey = document.createElement('strong');
+yobKey.innerText = 'annata: ';
+yobContainer.appendChild(yobKey);
+
+const yobValue = document.createElement('span');
+yobValue.innerText = champagne.yob;
+yobContainer.appendChild(yobValue);
+
