@@ -48,3 +48,14 @@ console.log(dolcetto.toString());
 //non sia negativo
 //l'unica differenza sta nel premiumWine che nel getter moltiplica il prezzo usando
 //questa formula prezzoReale = prezzo + (prezzo / 10 * anniDiInvecchiamento);
+
+
+///DOCUMENT OBJECT MODEL
+
+console.log(document);
+
+const h1Title = document.getElementById('main-title');
+
+console.log(h1Title);
+
+h1Title.innerText = "Enoteca Bartoletti S.P.A."

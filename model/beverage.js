@@ -22,7 +22,7 @@ class Beverage {
     }
 
     toString() {
-
+        
         return `nome: ${this.name}
 produttore: ${this.producer}
 annata: ${this.yob}
